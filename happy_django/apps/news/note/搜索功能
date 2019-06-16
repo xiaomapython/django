@@ -1,0 +1,13 @@
+传统模糊查询的缺点：
+    速度慢
+
+搜索引擎原理：
+    1、搜索引擎并不是直接在数据库中进行查询
+    2、会对数据库中的数据进行一遍预处理，单独建立索引结构数据
+    3、类似字典的索引检索页
+
+Elasticsearch:
+    不支持中文分割
+
+docker image pull delron/elasticsearch-ik:2.4.6-1.0
+删除全部容器：docker rm `docker ps -a -q`

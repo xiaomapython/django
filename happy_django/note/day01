@@ -1,0 +1,12 @@
+1、创建仓库，交给git管理
+    git init
+2、提交到本地仓库
+    git commit -m "代码测试"
+3、推送到码云
+    3、1 使用https链接推送到码云
+        git remote add origin_https https://gitee.com/QQpp0000/happy_django.git
+        git push origin_https master
+
+    3、2 使用ssh链接推送到码云
+        git remote add origin_ssh git@gitee.com:QQpp0000/happy_django.git
+        git push origin_ssh master

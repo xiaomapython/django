@@ -1,0 +1,4 @@
+在建表时，使用外键会影响查询性能，所以建议使用联合查询：select_related
+
+数据库导入方法：
+    mysql -u root -p -D happy_django <  xx.sql

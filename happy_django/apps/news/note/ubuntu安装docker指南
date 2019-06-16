@@ -1,0 +1,9 @@
+1、选择国内的云服务商，这里选择阿里云为例
+    curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh -
+2、安装所需要的包
+    sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
+3、添加成功后更新软件包缓存
+    sudo apt-get update
+4、启动 docker
+    sudo systemctl enable docker
+    sudo systemctl start docker
