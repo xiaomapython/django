@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+      静态文件的引用
+    </title>
+{#    <link rel="stylesheet" href="/static/css/mystyle.css">#}
+{#    <script src="/static/js/myjs.js"></script>#}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+  <script src="{% static 'js/myjs.js' %}"></script>
+</head>
+<body>
+<h2>静态文件测试</h2>
+</body>
+</html>

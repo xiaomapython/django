@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+      模板中运算
+    </title>
+</head>
+<body>
+<h2 style="text-align: center;color: red">模板中运算</h2>
+原始list:{{ list }} <br>
+{% for i in list %}
+  {% if forloop.counter == 2 %}
+    <h2>第二个值为：{{ i }}</h2>
+  {% else %}
+    {{ i }}<br>
+  {% endif %}
+{% endfor %}
+
+{% for foo in lls %}
+  {{ foo }}
+  {% empty %}
+    lls为空
+{% endfor %}<br><br><br>
+原始html:{{ html }}
+{% autoescape off %}
+  {{ html }}
+{% endautoescape %}
+</body>
+</html>

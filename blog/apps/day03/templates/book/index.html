@@ -1,0 +1,63 @@
+{% extends 'blog/demo_base.html' %}
+
+{% block title %}
+    首页
+{% endblock %}
+
+{% block bodyblock %}
+    <h2 style="text-align: center;color: red">过滤器</h2>
+    <tr>
+        <td>原始字符串：{{ str }}</td><br>
+        <td>变为小写：{{ str|lower }}</td><br>
+        <td>首字母大写：{{ str|lower|capfirst }}</td><br>
+        <td>：{{ str|truncatechars:7 }}</td><br>
+        {#        显示两个单词#}
+        <td>：{{ str|truncatewords:2 }}</td><br>
+        {% load filter_test %}
+        <td>自定义过滤器：{{ str|my_lower }}</td><br>
+        <td>自定义过滤器：{{ str|my_cut:"o" }}</td><br>
+        <td>自定义标签：{% current_time1 '%Y-%m-%d %H:%M:%S' %}</td><br>
+        <td>自定义标签：{% current_time2 %}</td><br>
+
+    </tr><br>
+    <tr>
+        <td>原始列表：{{ list }}</td><br>
+        <td>第一个值：{{ list.0 }}</td><br>
+        <td>第二个值：{{ list.1 }}</td><br>
+        <td>第四个值：{{ list.3 }}</td><br>
+        <td>获取第一个值：{{ list|first }}</td><br>
+        <td>获取最后一个值：{{ list|last }}</td><br>
+        <td>切片：{{ list|slice:'1:3' }}</td><br>
+        <td>把列表变为字符串，中间以逗号分隔：{{ list|join:',' }}</td><br>
+        <td>切片：{{ list|join:','|cut:',' }}</td><br>
+    </tr><br>
+  <tr>
+        <td>原始html：{{ html }}</td><br>
+        <td>显示7个字符：{{ html|truncatechars_html:7 }}</td><br>
+        <td>显示1个单词，其他使用...表示：{{ html|truncatewords_html:1 }}</td><br>
+        <td>关闭自动转义，把标签正常识别为html标签：{{ html|safe }}</td><br>
+  </tr>
+  <tr>
+      <td>原始浮点数：{{ float }}</td><br>
+      <td>保留两位小数：{{ float|floatformat:'2' }}</td><br>
+      <td>舍弃小数位：{{ float|floatformat:'0' }}</td><br>
+  </tr><br>
+  <tr>
+      <td>默认显示：{{ now }}</td><br>
+{#      H：24小时值，h：12小时制#}
+      <td>格式化时间：{{ now|date:'Y年m月d日 H:i:s' }}</td><br>
+      <td></td><br>
+  </tr><br>
+  <tr>
+    <td>原始数据num1:{{ num1 }}</td><br>
+    <td>原始数据num2:{{ num2 }}</td><br>
+{#    num3没定义，使用default#}
+    <td>不存在变量num3:{{ num3|default:88 }}</td><br>
+{#    num4定义了，但是值为None#}
+    <td>不存在变量num4:{{ num4|default_if_none:97 }}</td><br>
+    <td>加法运算：num1+num2={{ num1|add:num2 }}</td><br>
+    <td>加法运算：num1+num3={{ num1|add:num3 }}</td><br>
+    <td></td><br>
+  </tr><br>
+
+{% endblock %}

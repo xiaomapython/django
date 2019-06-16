@@ -1,0 +1,11 @@
+{% extends 'music/demo_base.html' %}
+
+{% block title %}
+    首页
+{% endblock %}
+
+{% block content %}
+{#  继承父模板的内容#}
+  {{ block.super }}<br>
+    这是子模板的内容。。。。
+{% endblock %}
