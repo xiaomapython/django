@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form action="" method="post">{% csrf_token %}
+  {{ form.as_p }}
+  {% if error %}
+    <h6 style="color: red">{{ error }}</h6>
+  {% endif %}
+  <a href="{% url "blog:blog_reg" %}">点击注册</a>&emsp;&emsp;&emsp;&emsp;
+  <input type="submit" value="登录">
+
+</form>
+</body>
+</html>

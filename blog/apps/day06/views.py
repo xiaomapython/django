@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render, render_to_response
 
 from .models import Department, Stu_detail, Student, Course
 
@@ -42,3 +43,14 @@ def dept(request):
     d2.student_set.get_or_create(s_name="张靓颖")
     
     return HttpResponse('xxxxxxx')
+
+
+# 404
+def page_not_found(request, exception):
+    return render(request, "day06/404.html", status=404)
+
+
+# 500
+def page_error(request):
+    return render(request, 'day06/500.html', status=500)
+

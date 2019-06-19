@@ -1,0 +1,5 @@
+1、定义404页面有两种方法：
+    1)直接在templates目录下创建404.html
+    2)在视图函数中写视图函数
+        def page_not_found(request, exception):
+            return render(request, "day06/404.html", status=404)

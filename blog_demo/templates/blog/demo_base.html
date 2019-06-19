@@ -17,16 +17,23 @@
         margin-right: auto;
 
       }
-
+      .logout{
+        text-decoration: none;
+        float: right;
+        color: blueviolet;
+      }
     </style>
 </head>
 <body>
 <div class="header">
-<a class="tt" href="{% url 'blog:blog_index' %}">首页</a>
-<a class="tt" href="{% url 'blog:blog_add' %}">添加文章</a>
-<a class="tt" href="{% url 'blog:blog_list' %}">文章列表</a>
-<a class="tt" href="{% url 'upload:file_upload' %}">文件上传</a>
-<a class="tt" href="">文件列表</a>
+  <a class="tt" href="{% url 'blog:blog_index' %}">首页</a>
+  <a class="tt" href="{% url 'blog:blog_add' %}">添加文章</a>
+  <a class="tt" href="{% url 'blog:blog_list' %}">文章列表</a>
+  <a class="tt" href="{% url 'upload:file_upload' %}">文件上传</a>
+  <a class="tt" href="">文件列表</a>
+
+  <a class="logout" href="{% url 'blog:blog_logout' %}">退出</a>&nbsp;
+  &nbsp;<a style="float: right;">欢迎 {{ request.user }} 登录</a> &nbsp;
 </div>
 
 {% block bodyblock %}

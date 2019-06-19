@@ -1,0 +1,24 @@
+                                        auth系统
+
+1、相关的6个表
+    auth_group
+    auth_group_permission
+    auth_permission
+    auth_user
+    auth_user_groups
+    auth_user_user_permission
+
+2、auth认证系统功能
+    create_user             创建用户
+    authenticate            验证登录
+    login                   记住用户的登录状态
+    logout                  退出登录
+    is_authenticate         判断用户是否登录
+    login_required          判断用户是否登录的装饰器
+
+3、应用form中使用的是auth自带的用户表auth_user,而不是tb_user
+
+4、
+5、
+6、
+
