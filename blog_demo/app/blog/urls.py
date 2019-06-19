@@ -11,5 +11,4 @@ urlpatterns = [
     path('list/', views.list, name="blog_list"),
     path('edit/<int:id>', views.edit, name="blog_edit"),
     path('delete/<int:id>', views.delete, name="blog_delete"),
-
 ]

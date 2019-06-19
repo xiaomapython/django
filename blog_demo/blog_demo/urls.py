@@ -18,4 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path("", include("blog.urls")),
+    path("get_post/", include("get_post.urls")),
+    path("", include("upload.urls")),
 ]

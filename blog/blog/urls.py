@@ -23,4 +23,7 @@ urlpatterns = [
     path('', include("day04.urls")),
     path('', include("day05.urls")),
     path('', include("day06.urls")),
+    path('form_test/', include("form_test.urls")),
+    path('form/', include("form.urls")),
+    path('mid/', include("middleware.urls")),
 ]

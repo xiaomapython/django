@@ -48,6 +48,10 @@ INSTALLED_APPS = [
     'day06',
     
     'common',  # 自定义过滤器或标签
+    
+    "form_test",
+    "form",
+    "middleware",
 ]
 
 MIDDLEWARE = [
@@ -94,9 +98,9 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog_django',
+        'NAME': 'blog_test',
         'USER': 'root',
-        'PASSWORD': 'qwe123',
+        'PASSWORD': '123456',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         # "OPTIONS": {"init_command": "SET default_storage_engine=INNODB;"}
