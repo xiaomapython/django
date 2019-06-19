@@ -1,6 +1,6 @@
                                              django仓项目说明 
 
-摘要：master分支包含3个django项目：
+摘要：master分支包含3个django项目：														
     1、blog
     2、blog_demo
     3、happy_django
