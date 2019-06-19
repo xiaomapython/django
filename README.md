@@ -1,12 +1,13 @@
                                              django仓项目说明 
-
-摘要：master分支包含3个django项目：														
+#### 介绍
+摘要：master分支包含3个django项目：
     1、blog
     2、blog_demo
     3、happy_django
-一、blog项目说明
+#### 软件架构
+#### 一、blog项目说明
     blog中主要是一些小模块测试：
-二、blog_demo项目说明
+#### 二、blog_demo项目说明
     1）这个项目包含如下功能：
         1、用户注册
         2、用户登录及权限验证
@@ -23,6 +24,6 @@
             python manage.py runserver 0:9000
         2、访问项目：
             http://127.0.0.1:9000
-三、happy_django项目说明（这是个大项目在做。。。。。。）
+#### 三、happy_django项目说明（这是个大项目在做。。。。。。）
         
         
